@@ -1,156 +1,520 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>   Shang</title>
-  <meta name="description" content="The blog of Shang Jin">
-  <!-- 标签页图标 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Hexo</title>
   
 
-  <!-- 图标库 -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-  <!-- 动画库 -->
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
-  
-  <!-- css文件 -->
-  
-<link rel="stylesheet" href="/css/white.css">
-
-  <!-- 代码高亮 -->
-  
-<meta name="generator" content="Hexo 5.4.2"></head>
 
 
-<body>
 
-<div class="menu-outer">
-    <div class="menu-inner">
-      <div class="menu-site-name  animate__animated  animate__fadeInUp">
-        <a href="/">
-          Shang
-        </a>
-        
-      </div>
-      <div class="menu-group">
-        <ul class="menu-ul">
-        
-          <a href="/" class="nav-link">
-            <li class="menu-li  animate__animated  animate__fadeInUp">
-              HOME
-            </li>
-          </a>
-        
-          <a href="/archives" class="nav-link">
-            <li class="menu-li  animate__animated  animate__fadeInUp">
-              BLOG
-            </li>
-          </a>
-        
-        
-        
-        <a href="/search">
-          <li class="menu-li  animate__animated  animate__fadeInUp">
-            <i class="ri-search-line"></i>
-          </li>
-        </a>
-        
-          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
-            <i class="ri-menu-line"></i>
-          </li>
-        
-        </ul>
 
-      </div>
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-</div>
-<div id="mobile-main" class="animate__animated  animate__fadeIn">
-  <div class="mobile-menu-inner">
-    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
-      <a href="/">
-        Shang
-      </a>
-    </div>
-    <div class="mobile-menu-group" id="mobile-close">
-      <i class="ri-close-line"></i>
-    </div>
-
   </div>
 
-  <div class="mobile-menu-div">
-  
-    <a href="/" class="mobile-nav-link">
-      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
-        <span>HOME</span>
-      </div>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
     </a>
-  
-    <a href="/archives" class="mobile-nav-link">
-      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
-        <span>BLOG</span>
-      </div>
-    </a>
-  
-  
-    <a href="/search">  
-      <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
-        <i class="ri-search-line"></i>
-      </div>
-    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
 
 
-</div>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-<div class="body-outer">
-  <div class="body-inner">
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/22/%E6%96%87%E7%8C%AE%E7%BF%BB%E8%AF%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/22/%E6%96%87%E7%8C%AE%E7%BF%BB%E8%AF%91/" class="post-title-link" itemprop="url">文献翻译</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-22 20:24:21 / Modified: 20:24:27" itemprop="dateCreated datePublished" datetime="2023-03-22T20:24:21+08:00">2023-03-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
     
-    <section class="intro-section">
-    <div class="intro-content">
-        <div class="intro-title animate__animated  animate__fadeInUp">Hi.I&#39;m Shang Jin.</div>
-        <div class="intro-sub animate__animated  animate__fadeInUp"><p>A <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a> theme for <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a></p>
-</div>
-        <p class="intro-contact animate__animated  animate__fadeInUp">
-            
-                <a href="https://github.com/shangjin2001" target="_blank">
-                    <i class="ri-github-line"></i>
-                </a>
-            
-                <a href="mailto:841783024@qq.com" target="_blank">
-                    <i class="ri-mail-line"></i>
-                </a>
-            
-                <a href="-" target="_blank">
-                    <i class="r"></i>
-                </a>
-            
-        </p>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
     </div>
 
-</section>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/20/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/20/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-20 00:00:00 / Modified: 21:58:39" itemprop="dateCreated datePublished" datetime="2023-03-20T00:00:00+08:00">2023-03-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/20/%E9%9D%A2%E8%AF%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/20/%E9%9D%A2%E8%AF%95/" class="post-title-link" itemprop="url">面试</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-20 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-20T00:00:00+08:00">2023-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-22 20:31:54" itemprop="dateModified" datetime="2023-03-22T20:31:54+08:00">2023-03-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>​    Good morning / afternoon ，thank you for the chance to introduce myself. My name is ShangJin , and I am a final year student at Nanjing University of Aeronautics and Astronautics，majoring in information security. </p>
+<p>​    I have done my academic courses with a 3.4 GPA and got a second-class scholarship and a third-class scholarship.I once did a two-month network virtualization practice and built a virtual small network. Cyber Secruity major seems like a good fit for me because I am really passionate about the safety of the cyber space. (This is exactly why I chose to apply for the major of cyberspace security) . Besides, I am self-motivating , flexible with people and situations and ready to learn new things. I think these qualities will make me a good postgraduate in cyber security.</p>
+<p>​    NUAA has always been my dream school. It has such strong  background in computer studies and programs. And Nanjing is such an excellent city, especially for student who majors in computer. If I were to be addmitted, I would be so proud of myself and  embarked on an in-depth study of cyber security with my best performance. </p>
+<p>​    That’s all, thank you.</p>
+<p>​    </p>
+<h2 id="英语问答"><a href="#英语问答" class="headerlink" title="英语问答"></a>英语问答</h2><h3 id="喜欢的科目"><a href="#喜欢的科目" class="headerlink" title="喜欢的科目"></a>喜欢的科目</h3><p>Data structure is one of my favorite subjects for several reasons. First of all, it lays the foundation for many other computer science concepts and algorithms. By understanding data structures such as arrays, linked lists, trees, and graphs, I can better comprehend more complex topics like sorting and searching algorithms.</p>
+<p>Secondly, data structure is a highly practical subject. As a  cyber security student, I’ve found that many programming projects require an understanding of data structures. By implementing them in real-life scenarios, I can see the direct impact they have on program efficiency and functionality.</p>
+<p>Lastly, I find data structure to be a highly stimulating and intellectually challenging subject. The process of designing and implementing data structures involves a great deal of problem-solving and critical thinking. By mastering this subject, I feel like I can take on more complex challenges in the field of computer science.</p>
+<p>我非常喜欢数据结构这门课程，因为它是计算机科学中非常重要的一门课程。数据结构为我提供了一种将现实世界中复杂的问题转化为计算机可以理解和解决的问题的方法。</p>
+<p>数据结构是计算机算法的基础，它教会了我如何有效地组织和管理数据。这对于软件开发非常重要，因为一个好的数据结构可以大大提高程序的性能，并使代码更易于维护。</p>
+<p>另外，数据结构也教会了我如何解决一些复杂的问题。它训练了我抽象思维和逻辑思考能力，使我能够更加深入地理解计算机系统的工作原理。</p>
+<p>总之，数据结构不仅仅是一门课程，它是计算机科学中的核心概念，我非常喜欢它，并且认为它是每个计算机科学专业学生必须学习的课程之一。</p>
+<h3 id="介绍家乡"><a href="#介绍家乡" class="headerlink" title="介绍家乡"></a>介绍家乡</h3><p>Cangzhou, located in the eastern part of Hebei Province, is a coastal city that is known for its rich history and culture. As an important transportation hub in North China, it is easily accessible by high-speed rail, expressway, and air.</p>
+<p>Cangzhou has a long history dating back to the Tang Dynasty, and it is home to many historical and cultural sites, such as the Iron Lion of Cangzhou, the Yunhe Rice Granary, and the Cangzhou Confucian Temple. The city also boasts natural scenic spots like the Bohai Sea, Nanwang Bay, and Guanting Reservoir, which offer a variety of recreational activities.</p>
+<p>In addition, Cangzhou is known for its rich natural resources, particularly its salt and petroleum reserves. It has a strong industrial base and is a major producer of petrochemicals, machinery, and textiles.</p>
+<p>Overall, Cangzhou is a city with a unique blend of history, culture, and modern industry, making it an attractive destination for visitors and a great place to live and work.</p>
+<p>河北省沧州市位于华北地区东部，是一个以丰富的历史和文化而闻名的沿海城市。作为华北地区的重要交通枢纽，它可以通过高速铁路、高速公路和航空方便地到达。</p>
+<p>沧州有着悠久的历史，可以追溯到唐代，它是许多历史文化遗址的所在地，例如沧州铁狮子、运河米仓和沧州文庙。该市还拥有自然景点如渤海海域、南旺湾和官厅水库等，提供各种娱乐活动。</p>
+<p>此外，沧州以其丰富的自然资源而著称，特别是其盐和石油储量。它拥有强大的工业基础，并是石油化工、机械和纺织品的主要生产地。</p>
+<p>总的来说，沧州是一个历史、文化和现代工业独特融合的城市，使其成为游客的吸引力和居住和工作的好地方。</p>
+<h3 id="为什么选择南航"><a href="#为什么选择南航" class="headerlink" title="为什么选择南航"></a>为什么选择南航</h3><h3 id="为什么读研"><a href="#为什么读研" class="headerlink" title="为什么读研"></a>为什么读研</h3><p>It can help me develop my expertise in cyber security and keep myself updated with the latest research findings.Going to graduate school can prepare me for a new professional horizon , and make me better-positioned to be a qualified engineer.</p>
+<p>Graduate school is also a great place for me think critically and accept academic challenges from a wide variety of backgrounds and get exposure to different mechanisms of thinking</p>
+<p>它可以帮助我发展我在网络安全方面的专业知识，并让自己了解最新的研究成果。去研究生院可以让我为新的专业视野做好准备，让我更有能力成为一名合格的（工程师）。</p>
+<p>研究生院是也是我批判性思考和接受来自各种背景的学术挑战并接触不同思维机制的好地方</p>
+<h2 id="项目问题"><a href="#项目问题" class="headerlink" title="项目问题"></a>项目问题</h2><h3 id="工业控制系统蜜罐研究"><a href="#工业控制系统蜜罐研究" class="headerlink" title="工业控制系统蜜罐研究"></a>工业控制系统蜜罐研究</h3><h3 id="NFV虚拟网络实践"><a href="#NFV虚拟网络实践" class="headerlink" title="NFV虚拟网络实践"></a>NFV虚拟网络实践</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
 
 
 
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
 </div>
 
 
 
-<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
 
 
 
 
 
-<script src="/js/white.js"></script>
 
 
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
 
 </body>
 </html>
