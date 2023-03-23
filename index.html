@@ -263,7 +263,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-23 20:05:17" itemprop="dateModified" datetime="2023-03-23T20:05:17+08:00">2023-03-23</time>
+                <time title="Modified: 2023-03-23 20:51:12" itemprop="dateModified" datetime="2023-03-23T20:51:12+08:00">2023-03-23</time>
               </span>
 
           
@@ -327,13 +327,14 @@
 <h3 id="大数据和普通数据的区别"><a href="#大数据和普通数据的区别" class="headerlink" title="大数据和普通数据的区别"></a>大数据和普通数据的区别</h3><p>The storage methods are different, the amount of traditional data is small, while the amount of big data is huge. Data mining methods are different. Traditional data can be mined manually, while big data is generally mined using mining tools. In addition, SQL statements and python and other languages are needed to assist in summarizing and analyzing</p>
 <p>存储方式不同，传统数据量小，而大数据数量庞大。数据发掘方式不同，传统数据可以采用人工挖掘，而大数据一般采用挖掘工具进行挖掘，此外还需要借助sql语句和python等语言辅助汇总和分析</p>
 <h2 id="项目问题"><a href="#项目问题" class="headerlink" title="项目问题"></a>项目问题</h2><h3 id="工业控制系统蜜罐研究"><a href="#工业控制系统蜜罐研究" class="headerlink" title="工业控制系统蜜罐研究"></a>工业控制系统蜜罐研究</h3><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><h4 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h4><p>Docker + Conpot + Opencanary框架</p>
-<h3 id="NFV虚拟网络实践"><a href="#NFV虚拟网络实践" class="headerlink" title="NFV虚拟网络实践"></a>NFV虚拟网络实践</h3><h4 id="背景-1"><a href="#背景-1" class="headerlink" title="背景"></a>背景</h4><p>面对复杂的网络环境，例如大型企业，军队的内部网络，如果相对其中的某一台主机或者路由器进行修改配置，可能会引发错误（比如设置ACL访问控制表或者在Linux中设置iptables）。与其直接在硬件上进行配置，我们可以选择将网络环境抽象出来，在一个宿主机上搭建虚拟网络（也就是实现网络的虚拟化），用虚拟化网络来模拟某些需要配置到硬件层面的规则或指令。这样既不会影响正常使用，又可以更加灵活的配置访问规则</p>
+<h4 id="实现内容"><a href="#实现内容" class="headerlink" title="实现内容"></a>实现内容</h4><h3 id="NFV虚拟网络实践"><a href="#NFV虚拟网络实践" class="headerlink" title="NFV虚拟网络实践"></a>NFV虚拟网络实践</h3><h4 id="背景-1"><a href="#背景-1" class="headerlink" title="背景"></a>背景</h4><p>面对复杂的网络环境，例如大型企业，军队的内部网络，如果相对其中的某一台主机或者路由器进行修改配置，可能会引发错误（比如设置ACL访问控制表或者在Linux中设置iptables）。与其直接在硬件上进行配置，我们可以选择将网络环境抽象出来，在一个宿主机上搭建虚拟网络（也就是实现网络的虚拟化），用虚拟化网络来模拟某些需要配置到硬件层面的规则或指令。这样既不会影响正常使用，又可以更加灵活的配置访问规则</p>
 <h4 id="技术栈-1"><a href="#技术栈-1" class="headerlink" title="技术栈"></a>技术栈</h4><p>Linux容器技术 + 虚拟路由 + wireshark流量监控</p>
-<h4 id="实现内容"><a href="#实现内容" class="headerlink" title="实现内容"></a>实现内容</h4><p>首先利用Linux容器技术生成若干容器，选择部分容器通过虚拟路由技术使其变为虚拟路由器，满足协议的配置和主机互联功能。之后为容器创建所需的网卡和连接所用的网桥，分配IP地址。最后在主机和路由器以及路由器之间配置RIP、OSPF、和BGP协议，测试主机连通性。这样一个小型的虚拟网络就搭建完成了</p>
+<h4 id="实现内容-1"><a href="#实现内容-1" class="headerlink" title="实现内容"></a>实现内容</h4><p>实现了小型虚拟网络的搭建，包含11个虚拟路由器和4个虚拟主机，其中主机与路由器之间，主机和主机之间配置了RIP，OSPF和BGP协议。此网络环境可以借助wireshark实现监控流量的传输功能，也可以传输视频流。</p>
+<p>首先利用Linux容器技术生成若干容器，选择部分容器通过虚拟路由技术使其变为虚拟路由器，满足协议的配置和主机互联功能。之后为容器创建所需的网卡和连接所用的网桥，分配IP地址。最后在主机和路由器以及路由器之间配置RIP、OSPF协议，测试主机连通性，这样一个小型的虚拟网络就搭建完成了。借助这个小型网络可以实现例如流量传输，视频流传输的功能。</p>
 <p>（三个协议一定要熟悉）</p>
 <h4 id="技术难点-亮点"><a href="#技术难点-亮点" class="headerlink" title="技术难点/亮点"></a>技术难点/亮点</h4><p>Linux容器技术：Linux容器实际上是一个或者一组进程，所有的Linux容器都共用宿主机的操作内核，而虚拟机则是使用独属于自己的操作内核。利用虚拟路由技术可以在较小的网络开销条件下实现较大型的网络部署</p>
 <p>虚拟路由技术：虚拟路由器和路由器的功能相同。本实验的虚拟路由通过Frrouting工具实现，FRR是IP路由套件，可以实现多种路由协议。在容器中安装配置路由器可达的网段和协议，实现主机和路由器和主机与主机之间的互联。</p>
-<p>wireshark流量监控：用wireshark监控流量主要是为了测试主机之间是否连通，利用iperf3制造流量</p>
+<p>wireshark流量监控：用wireshark监控流量主要是为了测试主机之间是否连通，利用iperf3制造TCP/UDP流，监控目标主机的网卡可以捕获到流量数据则主机实现了互联。</p>
 
       
     </div>
